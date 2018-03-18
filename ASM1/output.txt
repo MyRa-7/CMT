@@ -1,0 +1,17 @@
+Part (a)
+
+Note to self : Check UNITS!
+At T = 200 :
+The value of entropy : 6.973507e+01 J/K.
+The value of enthalpy : 1.937668e+04 J/mol.
+The value of heat capacity : 8.867002e+01 J/K-mol.
+
+At T = 400 :
+The value of entropy : 1.405042e+02 J/K.
+The value of enthalpy : 4.003532e+04 J/mol.
+The value of heat capacity : 1.105348e+02 J/K-mol.
+
+At T = 500 :
+The value of entropy : 1.654728e+02 J/K.
+The value of enthalpy : 5.122943e+04 J/mol.
+The value of heat capacity : 1.130522e+02 J/K-mol.

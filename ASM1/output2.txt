@@ -1,0 +1,28 @@
+asm1q1
+Part (a)
+
+Note to self : Check UNITS!
+At T = 200 :
+The value of enthalpy : 1.701450e+04 J/mol.
+The value of entropy : 6.478289e+01 J/K.
+The value of heat capacity : 9.008246e+01 J/K-mol.
+
+Note to self : Check UNITS!
+At T = 400 :
+The value of enthalpy : 3.784321e+04 J/mol.
+The value of entropy : 1.381860e+02 J/K.
+The value of heat capacity : 1.193122e+02 J/K-mol.
+
+Note to self : Check UNITS!
+At T = 500 :
+The value of enthalpy : 5.100130e+04 J/mol.
+The value of entropy : 1.659348e+02 J/K.
+The value of heat capacity : 1.202085e+02 J/K-mol.
+
+
+Part (b)
+
+Part (c)
+
+The value of gibbs energy magnetic contribution : -1.861257e+03 J/mol.
+diary off;
