@@ -3,9 +3,19 @@
 c=4; % quaternary
 x=[0.25 0.25 0.25 0.25]; % order [Co; Cu; Fe; Ni]
 % scheme related values
-t_ij=1;
-beta_ij=1;
-lambda_ij=0;
+% % muggianu
+% t_ij=1;
+% beta_ij=1;
+
+% % Kohler
+% t_ij=1;
+% beta_ij=1;
+
+% % Colinet
+t_ij=2;
+beta_ij=0.5;
+
+
 n=100;
 z=60/n;
 for jj=1:n
@@ -23,8 +33,21 @@ for ii=1:size(x,1)
             for k=1:t_ij
                 %           disp(num2str(i));
                 %           disp(num2str(j));
-                [p,q,r]=parameters(x(ii,i),x(ii,j),lambda_ij);
                 
+                % % muggianu
+                % lambda_ij=0;
+                % % Kohler
+                % lambda_ij=(x(ii,i)-x(ii,j))/(x(ii,i)+x(ii,j));
+                % disp(num2str(lambda_ij));
+                % % Colinet
+                if(t_ij==1)
+                    lambda_ij=1;
+                else
+                    lambda_ij=-1;
+                end
+                
+                [p,q,r]=parameters(x(ii,i),x(ii,j),lambda_ij);
+                disp(num2str([p,q]));
                 if(i==1)
                     if(j==2)
                         gE=fCoCu(p,q);

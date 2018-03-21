@@ -3,9 +3,15 @@
 c=4; % quaternary
 x=[0.25 0.25 0.25 0.25]; % order [Co; Cu; Fe; Ni]
 % scheme related values
+% % muggianu
+% t_ij=1;
+% beta_ij=1;
+% lambda_ij=0;
+% % Kohler
 t_ij=1;
 beta_ij=1;
-lambda_ij=0;
+
+
 n=100;
 z=60/n;
 for jj=1:n
@@ -23,6 +29,9 @@ for ii=1:size(x,1)
             for k=1:t_ij
                 %           disp(num2str(i));
                 %           disp(num2str(j));
+                % muggianu
+                % lambda_ij=0;
+                
                 [p,q,r]=parameters(x(ii,i),x(ii,j),lambda_ij);
                 
                 if(i==1)
