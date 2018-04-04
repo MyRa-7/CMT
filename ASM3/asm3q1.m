@@ -9,7 +9,9 @@ a1=0.5;
 a2=0.5;
 
 % to find (one independent site fraction)
-y_Al_1=0.1;
+% y_Al_1=0.1;
+syms y_Al_1;
+
 y_Al_2=(x_Al-a1*y_Al_1)/a2;
 y_Ni_1=(1-y_Al_1);
 y_Ni_2=(x_Ni-a1*y_Ni_1)/a2;
@@ -49,3 +51,12 @@ L_Ni_AlNi=L0_Ni_AlNi+L1_Ni_AlNi*(y_Al_2-y_Ni_2);
 G_xs=y_Al_1*y_Ni_1*(y_Al_2*L_AlNi_Al+y_Ni_2*L_AlNi_Ni)+y_Al_2*y_Ni_2*(y_Al_1*L_Al_AlNi+y_Ni_1*L_Ni_AlNi);
 
 G=G_ref+G_conf+G_xs;
+
+% G_diff=diff(G,y_Al_1);
+G_dash=matlabFunction(diff(G,y_Al_1));
+x=fsolve(G_dash,0.5);
+
+y_Al_1=0.4;
+y_Al_2=(x_Al-a1*y_Al_1)/a2;
+y_Ni_1=(1-y_Al_1);
+y_Ni_2=(x_Ni-a1*y_Ni_1)/a2;
